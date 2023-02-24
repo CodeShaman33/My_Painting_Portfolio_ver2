@@ -41,4 +41,6 @@ let passionsArray =
       },
 ];
 
-export {passionsArray};
+let currentPassion 
+
+export {passionsArray, currentPassion};

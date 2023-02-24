@@ -11,6 +11,7 @@ class setLayout
         this.setNavBar();
         this.setAbout();
         this.setPassions();
+        this.setPassionSection();
     }
 
     //main container
@@ -103,6 +104,8 @@ class setLayout
             (item) => {
                 let li = document.createElement('li');
                 li.id = item.id;
+                li.classList.add('passion-item');
+
                 //icon
                 let icon = document.createElement('img');
                 icon.src = item.svg;
@@ -122,6 +125,22 @@ class setLayout
         )
         passions.appendChild(passionItems);
 
+    }
+
+    setPassionSection()
+    {
+        //passion description
+        let selectedPassion = document.getElementById("selected-passion");
+        let passionDescription = document.createElement("div");
+        passionDescription.classList.add("passion-description");
+        passionDescription.id = "passion-description";
+        selectedPassion.appendChild(passionDescription);
+        //passion photos
+        let passionPhotos = document.createElement("div");
+        passionPhotos.classList.add("passion-photos");
+        passionPhotos.id = 'passion-photos';
+        selectedPassion.appendChild(passionPhotos);
+        
     }
 }
 
