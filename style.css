@@ -3,6 +3,7 @@
 {
     --dark-violet: rgb(30, 8, 90);
     --light-violet: rgb(80, 13, 100);
+    --lighter-violet: rgb(80, 13, 100);
   
 }
 
@@ -21,18 +22,104 @@ body
 
 #main-container
 {
-    width: 95%;
+    width: 80%;
     height: 100vh;
     margin: auto;
     margin-top: 10px;
-    background-color: var(--dark-violet);
+    background-color: inherit;
 
+}
+
+.navbar, .about, .passion-items, .selected-passion, .footer
+{
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 #navbar
 {
     width: 100%;
-    height:4rem;
+    height:6em;
     background-color: var(--light-violet);
     display: flex;
+    justify-content: space-between;
+}
+
+#title
+{
+    margin-left: 20px;
+    height: inherit;
+    width: 30%;
+    align-items: center;
+    
+}
+
+.navbar-links
+{
+    display: flex;
+    height: 100%;
+    width: 40%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about
+{
+    background-color: aliceblue;
+    width: 100%;
+    height: 10rem;
+}
+
+.passions 
+{
+    display: flex;
+    width: 100%;
+    height: 20rem;
+    background-color: rgb(41, 123, 196);
+    justify-content: center;
+
+}
+
+.passion-items
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:inherit;
+    height: inherit;
+    
+}
+
+#passion-items li{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    height: 90%;
+    width: 24%;
+    align-items: center;
+    justify-content: center;
+    border: 1px black solid;
+    padding: 10px;
+    margin: 20px 20px;
+}
+
+#passion-items li img
+{
+    width: 80%;
+    height: 30%;
+    align-items: center;
+}
+
+.selected-passion
+{
+    background-color: rgb(8, 44, 75);
+    width: 100%;
+    height: 30rem;
+}
+
+.footer 
+{
+    background-color: aliceblue;
+    width: 100%;
+    height: 8rem;
 }
