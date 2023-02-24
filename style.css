@@ -1,0 +1,38 @@
+
+:root
+{
+    --dark-violet: rgb(30, 8, 90);
+    --light-violet: rgb(80, 13, 100);
+  
+}
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-color: black;
+}
+
+
+#main-container
+{
+    width: 95%;
+    height: 100vh;
+    margin: auto;
+    margin-top: 10px;
+    background-color: var(--dark-violet);
+
+}
+
+#navbar
+{
+    width: 100%;
+    height:4rem;
+    background-color: var(--light-violet);
+    display: flex;
+}
