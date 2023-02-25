@@ -46,8 +46,15 @@ function indexCarousel(tempId) {
     // Create elements for the carousel
     const carousel = document.createElement("div");
     carousel.className = "index-carousel";
+    const buttonsContainer = document.createElement("div");
+    buttonsContainer.classList.add("buttons-container");
+    
     const prevButton = document.createElement("button");
+    prevButton.classList.add("button");
     const nextButton = document.createElement("button");
+    nextButton.classList.add("button");
+    buttonsContainer.appendChild(prevButton);
+    buttonsContainer.appendChild(nextButton);
     prevButton.id = "prev-button";
     nextButton.id = "next-button";
 
@@ -74,8 +81,8 @@ function indexCarousel(tempId) {
 
     // Add elements to container
     container.appendChild(carousel);
-    container.appendChild(prevButton);
-    container.appendChild(nextButton);
+    container.appendChild(buttonsContainer);
+
   }
 
 export default setSelectedPassion;

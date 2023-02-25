@@ -2,8 +2,9 @@
 :root
 {
     --dark-violet: rgb(30, 8, 90);
-    --light-violet: rgb(80, 13, 100);
-    --lighter-violet: rgb(80, 13, 100);
+    --light-violet: rgb(61, 13, 100);
+    --lighter-violet: rgb(108, 45, 167);
+    --border-basic: 1px solid black;
   
 }
 
@@ -16,7 +17,7 @@
 
 body
 {
-    background-color: black;
+    background-color: rgb(3, 3, 3);
 }
 
 
@@ -32,7 +33,7 @@ body
 
 .navbar, .about, .passions, .selected-passion, .footer
 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border-radius: 10px;
 }
 
@@ -43,14 +44,78 @@ body
     background-color: var(--light-violet);
     display: flex;
     justify-content: space-between;
+    position: relative;
+
 }
+
+.hamburger
+{
+    position: absolute;
+    width: 5rem;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    align-items: center;
+    border-radius: 10px;
+    border: white 1px solid;
+    display: none;
+}
+
+.hamburger:hover
+{
+    background-color: var(--dark-violet);
+
+}
+
+.hamburger span
+{
+    width: 95%;
+    height: 4px;
+    border-radius: 10px;
+    background-color: black;
+
+}
+
+@media (max-width: 700px)
+{
+    .hamburger
+    {
+        display: flex;
+    }
+    .navbar 
+    {
+        height: 30rem;
+
+    }
+    .navbar-links
+    {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links li
+    {
+        width: 100%;
+        text-align: center;
+    }
+    
+}
+
+
 
 #title
 {
     margin-left: 20px;
     height: inherit;
+    display: flex;
     width: 30%;
     align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-family: fantasy;
     
 }
 
@@ -60,22 +125,66 @@ body
     height: 100%;
     width: 40%;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-right: 5%;
+}
+
+
+.navbar-links li a
+{
+    text-decoration: none;
+    color: rgb(252, 252, 252);
+    font-size: 25px;
+    padding: 20px 30px;
+}
+
+.navbar-links li a:hover
+{
+    background-color: var(--dark-violet);
+    font-size: 30px;
+    color: white;
+    -webkit-box-shadow: 8px 8px 75px 15px rgba(6, 1, 21, 1);
+-moz-box-shadow: 8px 8px 75px 15px rgba(6, 1, 21, 1);
+box-shadow: 8px 8px 75px 15px rgba(6, 1, 21, 1);
+border-radius: 10px;
 }
 
 .about
 {
-    background-color: aliceblue;
+    background-color: rgb(104, 24, 179);
     width: 100%;
     height: 10rem;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
 }
+
+#about
+{
+  background: linear-gradient(-45deg, #a934c0, #c4328c, #23a6d5, #23d5ab);
+  animation: gradient 4s ease infinite;
+  background-size: 400% 400%;
+}
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
 .passions 
 {
     display: flex;
     width: 100%;
-    height: 20rem;
-    background-color: rgb(41, 123, 196);
+    height: 13rem;
+    background-color: rgb(108, 24, 141);
     justify-content: center;
 
 }
@@ -87,6 +196,8 @@ body
     align-items: center;
     width:inherit;
     height: inherit;
+    padding-left: 20px;
+    padding-right: 20px;
     
 }
 
@@ -94,14 +205,34 @@ body
     display: flex;
     flex-direction: column;
     list-style: none;
-    height: 50%;
+    height: 75%;
     width: 20%;
     align-items: center;
     justify-content: center;
-    border: 1px black solid;
     padding: 10px;
     margin: 20px 20px;
+    background-color: var(--lighter-violet);
+    border-radius: 20px;
+    -webkit-box-shadow: 1px 11px 86px -14px rgba(31, 4, 52, 1);
+    -moz-box-shadow: 1px 11px 86px -14px rgba(31, 4, 52, 1);
+    box-shadow: 1px 11px 86px -14px rgba(31, 4, 52, 1);
+
 }
+
+#passion-items li:hover
+{
+    height: 80%;
+    width: 23%;
+    transition: 200ms height ease-in-out;
+    -webkit-box-shadow: 1px 11px 100px 24px rgba(7, 0, 12, 1);
+-moz-box-shadow: 1px 11px 100px 24px rgba(7, 0, 12, 1);
+box-shadow: 1px 11px 100px 24px rgba(7, 0, 12, 1);
+ background-color: rgb(65, 25, 129);
+ transition: background-color 350ms ease-in;
+
+
+}
+
 
 #passion-items li *
 {
@@ -118,11 +249,26 @@ body
     width: 80%;
     height: 30%;
     align-items: center;
+    margin-bottom: 20px;
 }
+
+#passion-items li:hover img
+{
+    width: 90%;
+    height: 40%;
+}
+
+#passion-items li h2
+{
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+
 
 .selected-passion
 {
-    background-color: rgb(8, 44, 75);
+    background-color: rgb(34, 87, 133);
     width: 100%;
     height: 30rem;
     display: flex;
@@ -132,13 +278,37 @@ body
 
 }
 
+.passion-description
+{
+    background-color: rgb(58, 123, 180);
+}
+
+.selected-passion h2
+{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.selected-passion p
+{
+    padding: 13px;
+    font-size: 20px;
+}
+
 #passion-description, #passion-photos
 {
     width: 42%;
     height: 90%;
-    border: 1px solid black;
     border-radius: 10px;
 
+}
+
+
+
+.passion-photos img
+{
+    border-radius: 10px;
 }
 
 
@@ -146,7 +316,95 @@ body
 
 .footer 
 {
-    background-color: aliceblue;
+    background-color:rgb(30, 8, 90);
     width: 100%;
     height: 8rem;
+}
+
+#passion-photo
+{
+}
+
+.index-carousel
+{
+    width: 100%;
+    height: 100%;
+}
+
+.index-carousel img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.buttons-container
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.button
+{
+    width: 44%;
+    height: 2rem;
+    margin: 4px;
+    border-radius: 5px;
+    font-size: 25px;
+    background-color: rgb(84, 144, 196);
+    border: none;
+
+}
+
+.button:hover
+{
+    width: 50%;
+    transition: width 800ms ease;
+    background-color: var(--lighter-violet);
+    border: var(--border-basic);
+
+}
+
+
+@media (max-width: 700px)
+{
+    .hamburger
+    {
+        display: flex;
+    }
+    .navbar 
+    {
+        height: auto;
+        flex-direction: column;
+
+    }
+    .navbar-links
+    {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        background-color: var(--light-violet);
+        display: none;
+
+    }
+
+    .navbar-links[active]
+    {
+        display: flex;
+    }
+
+    
+    .navbar-links li
+    {
+        width: 100%;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        background-color: var(--dark-violet);
+        border-radius: 10px;
+    }
+    
 }

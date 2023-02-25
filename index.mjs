@@ -1,6 +1,6 @@
 // contains functions that create layout to the main page
 //import files
-import { passionsArray } from "./data.mjs";
+import { passionsArray, aboutMe } from "./data.mjs";
 
 class setLayout
 {
@@ -12,6 +12,7 @@ class setLayout
         this.setAbout();
         this.setPassions();
         this.setPassionSection();
+        this.hamburger();
     }
 
     //main container
@@ -87,7 +88,7 @@ class setLayout
     setAbout()
     {
         let about = document.getElementById("about");
-        about.textContent = "About";
+        about.textContent = aboutMe;
 
     }
     
@@ -117,10 +118,9 @@ class setLayout
                 let title = document.createElement('h2');
                 title.textContent = item.title;
                 li.appendChild(title);
-                let description = document.createElement('p');
-                description.textContent = item.description;
-                li.appendChild(description);
                 passionItems.appendChild(li);
+
+                
             }
         )
         passions.appendChild(passionItems);
@@ -141,6 +141,24 @@ class setLayout
         passionPhotos.id = 'passion-photos';
         selectedPassion.appendChild(passionPhotos);
         
+    }
+
+    hamburger()
+    {
+        let hamburger = document.createElement("div");
+        hamburger.classList.add("hamburger");
+        hamburger.id = "hamburger";
+        hamburger.innerHTML = "<span></span><span></span><span></span>";
+        let navbar = document.getElementById("navbar");
+        navbar.appendChild(hamburger);
+        //event listener
+        hamburger.addEventListener("click", () => 
+        {
+            let navLinks = document.getElementsByClassName("navbar-links");
+            navLinks[0].toggleAttribute("active");
+
+
+        });
     }
 }
 
