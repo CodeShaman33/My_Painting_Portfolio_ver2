@@ -80,29 +80,7 @@ body
 
 }
 
-@media (max-width: 700px)
-{
-    .hamburger
-    {
-        display: flex;
-    }
-    .navbar 
-    {
-        height: 30rem;
 
-    }
-    .navbar-links
-    {
-        width: 100%;
-        flex-direction: column;
-    }
-    .navbar-links li
-    {
-        width: 100%;
-        text-align: center;
-    }
-    
-}
 
 
 
@@ -219,19 +197,23 @@ border-radius: 10px;
 
 }
 
-#passion-items li:hover
+@media (min-width: 768px)
 {
-    height: 80%;
-    width: 23%;
-    transition: 200ms height ease-in-out;
-    -webkit-box-shadow: 1px 11px 100px 24px rgba(7, 0, 12, 1);
--moz-box-shadow: 1px 11px 100px 24px rgba(7, 0, 12, 1);
-box-shadow: 1px 11px 100px 24px rgba(7, 0, 12, 1);
- background-color: rgb(65, 25, 129);
- transition: background-color 350ms ease-in;
-
-
+    #passion-items li:hover
+    {
+        height: 80%;
+        width: 23%;
+        transition: 200ms height ease-in-out;
+        -webkit-box-shadow: 1px 11px 100px 24px rgba(7, 0, 12, 1);
+    -moz-box-shadow: 1px 11px 100px 24px rgba(7, 0, 12, 1);
+    box-shadow: 1px 11px 100px 24px rgba(7, 0, 12, 1);
+     background-color: rgb(65, 25, 129);
+     transition: background-color 350ms ease-in;
+    
+    
+    }
 }
+
 
 
 #passion-items li *
@@ -406,5 +388,71 @@ box-shadow: 1px 11px 100px 24px rgba(7, 0, 12, 1);
         background-color: var(--dark-violet);
         border-radius: 10px;
     }
+
+    #about 
+    {
+        height: 22rem;
+    }
+
+    .passions
+    {
+        height: 30rem;
+    }
+
+    #passion-items
+    {
+        
+        flex-direction: column;
+        height: 30rem;
+        justify-content: space-evenly;
+    }
+
+    #passion-items li
+    {
+        width: 100%;
+        height: 5rem;
+        padding: 5px;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        
+    }
+
+    
+    .passion-icon
+    {
+        width: 20%;
+        margin: 0;
+    }
+
+    #passion-items li h2
+    {
+        font-size: 40px;
+    }
+
+    #passion-items li img{
+        width: 30%;
+        height: 60%;
+    }
+
+    .selected-passion
+    {
+        flex-direction: column;
+        height: 40rem;
+    }
+
+    #passion-description
+    {
+        width: 90%;
+        height:20rem;
+        
+    }
+
+
+
+
+
     
 }
