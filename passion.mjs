@@ -4,6 +4,8 @@ import { currentPassion, passionsArray } from "./data.mjs";
 function setSelectedPassion()
 {
     let passions = document.querySelectorAll('.passion-item');
+    let selectedOne = document.getElementById('selected-passion');
+
     passions.forEach(item => {
     //get id of an element
     let tempId = item.getAttribute('id');
@@ -24,6 +26,8 @@ function setSelectedPassion()
         desc.appendChild(tempDesc);
         //create carousel for specific passion
         indexCarousel(tempId);
+        selectedOne.setAttribute('active', 'true');
+
 
     });
 
