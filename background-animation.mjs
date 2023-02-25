@@ -61,7 +61,7 @@ class Rune {
 
 const runeParticles = [];
 
-for (let i = 0; i < 1002; i++) {
+for (let i = 0; i < 100; i++) {
   runeParticles.push(new Rune());
 }
 
