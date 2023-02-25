@@ -35,14 +35,10 @@
     align-items: center;
 }
 
-.carousel-item
+
+.carousel-item[active='false']
 {
     display: none;
-}
-
-.carousel-item[active='true']
-{
-    display: block;
 }
 
 .carousel #previous-button

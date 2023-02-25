@@ -12,6 +12,8 @@ class Carousel
         this.setUpLayout();
         this.setUpCarousel();
         this.galleryCarousel();
+        this.currentSlide = 0;
+
 
     }
 
@@ -57,9 +59,11 @@ class Carousel
             image.id = `carousel-image-${i}`;
             image.src = imageUrls[i];
             listElement.appendChild(image);
+            listElement.setAttribute('style', 'display: none;');
+
+
             this.carouselList.appendChild(listElement);
             //diplay 
-            listElement.toggleAttribute('active', false);
 
 
         }
@@ -76,20 +80,28 @@ class Carousel
         nextButton.id = "next-button";
         nextButton.innerHTML = ">>";
         this.carousel.appendChild(nextButton);
+        let slides = document.querySelectorAll(".carousel-item");
+
         
     
         //Add event listeners to buttons
         previousButton.addEventListener("click", () => {
-            let slide = document.getElementById(`carousel-item-${1}`);
-            slide.toggleAttribute('active', 'true');
-            
-        //   currentImageIndex = (currentImageIndex + imageCount - 1) % imageCount;
-        //   slide.toggleAttribute('active', true);
+            slides[currentImageIndex].style.display = "none";
+
+            currentImageIndex = (currentImageIndex + imageCount - 1) % imageCount;
+            let slide = document.getElementById(`carousel-item-${currentImageIndex}`);
+            slide.setAttribute('style', 'display: block;');
+
+
 
         });
         nextButton.addEventListener("click", () => {
-        //   currentImageIndex = (currentImageIndex + 1) % imageCount;
-        //   let slide = document.getElementById(`carousel-item-${currentImageIndex}`);
+            slides[currentImageIndex].style.display = "none";
+
+          currentImageIndex = (currentImageIndex + 1) % imageCount;
+          let slide = document.getElementById(`carousel-item-${currentImageIndex}`);
+          slide.setAttribute('style', 'display: block;');
+
         });
     
 
