@@ -1,5 +1,5 @@
 import setLayout from "./main.mjs";
-import setSelectedPassion  from "./passion.mjs";
+import {setSelectedPassion}  from "./passion.mjs";
 import passionEventListener from "./event-listener.mjs";
 
 //setting up elements 

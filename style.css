@@ -300,6 +300,12 @@ border-radius: 10px;
 
 }
 
+.carousel-inside, .carousel-item, .carousel-item img
+{
+    width: 100%;
+    height: 100%;
+}
+
 
 
 .passion-photos img
@@ -307,6 +313,15 @@ border-radius: 10px;
     border-radius: 10px;
 }
 
+.carousel-item
+{
+    display: none;
+}
+
+.carousel-item.active
+{
+    display: block;
+}
 
 
 

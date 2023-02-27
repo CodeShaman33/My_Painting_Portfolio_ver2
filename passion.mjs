@@ -1,5 +1,6 @@
 //import 
-import { currentPassion, passionsArray } from "./data.mjs";
+import { currentPassion, passionsArray, paintingsList } from "./data.mjs";
+import createPhotoCarousel from './carousel.mjs';
 
 function setSelectedPassion()
 {
@@ -9,6 +10,8 @@ function setSelectedPassion()
     passions.forEach(item => {
     //get id of an element
     let tempId = item.getAttribute('id');
+    let photoElement = document.getElementById('passion-photos');
+
 
     item.addEventListener('click', () => 
     {
@@ -25,8 +28,7 @@ function setSelectedPassion()
         tempDesc.textContent = passionsArray[tempId].description;
         desc.appendChild(tempDesc);
         //create carousel for specific passion
-        indexCarousel(tempId);
-        selectedOne.setAttribute('active', 'true');
+        createPhotoCarousel(photoElement, paintingsList);
 
 
     });
