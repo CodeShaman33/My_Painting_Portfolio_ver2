@@ -3,8 +3,9 @@
 #painting-list 
 {
     width: 100%;
-    height: 20rem;
+    height: 10rem;
     background-color: aliceblue;
+    margin-bottom: 10px;border-radius: 10px;
 }
 
 #carousel
@@ -15,6 +16,7 @@
     margin: 0;
     padding: 0;
     position: relative;
+    border-radius: 10px;
 }
 
 #carousel ul, #carousel ul li, #carousel ul li img
@@ -23,32 +25,47 @@
     padding: 0;
     width: 100%;
     height: 100%;
+    border-radius: inherit;
 }
 
 
-.carousel #previous-button, .carousel #next-button
+.carousel-inside 
 {
+    position: relative;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-button 
+{
+    width: 100px;
+    height: 100px;
+    background-color: white;
     position: absolute;
     top: 50%;
-    width: 4rem;
-    height: 4rem;
-    align-items: center;
+
+}
+
+.prev-button
+{
+    left: 2rem;
+   
+}
+
+.next-button
+{
+    right: 2rem;
 }
 
 
-.carousel-item[active='false']
+.carousel-item
 {
     display: none;
 }
 
-.carousel #previous-button
+.carousel-item.active
 {
-    
-    left: 2rem;
-    
+    display: block;
 }
 
-.carousel #next-button
-{
-    right: 2rem;
-}
