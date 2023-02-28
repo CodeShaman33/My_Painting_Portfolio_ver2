@@ -313,16 +313,6 @@ border-radius: 10px;
     border-radius: 10px;
 }
 
-.carousel-item
-{
-    display: none;
-}
-
-.carousel-item.active
-{
-    display: block;
-}
-
 
 
 .footer 

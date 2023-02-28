@@ -28,6 +28,7 @@ function setSelectedPassion()
         tempDesc.textContent = passionsArray[tempId].description;
         desc.appendChild(tempDesc);
         //create carousel for specific passion
+        photoElement.innerHTML = '';
         createPhotoCarousel(photoElement, paintingsList);
 
 

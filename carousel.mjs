@@ -26,13 +26,13 @@ export default function createPhotoCarousel(element, imageUrls) {
     let prevButton = document.createElement('button');
     prevButton.classList.add('carousel-button');
     prevButton.classList.add('prev-button');
-    prevButton.innerText = 'Prev';
+    prevButton.innerHTML = '&#8656';
     carousel.appendChild(prevButton);
   
     let nextButton = document.createElement('button');
     nextButton.classList.add('carousel-button');
     nextButton.classList.add('next-button');
-    nextButton.innerText = 'Next';
+    nextButton.innerHTML = '&#8658';
     carousel.appendChild(nextButton);
   
     // set up event listeners for prev and next buttons
