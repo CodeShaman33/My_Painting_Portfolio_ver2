@@ -50,7 +50,7 @@
     background-color: rgba(95, 25, 175, 0.24);
     position: absolute;
     top: 0%;
-    font-size: 100px;
+    font-size: 3rem;
     border: none;
     z-index: 2;
 
@@ -61,7 +61,7 @@
 .carousel-button:hover 
 {
     background-color: rgba(95, 25, 175, 0.6);
-    font-size: 130px;
+    font-size: 4rem;
     color: aliceblue;
     box-shadow: 5px 1px 117px 38px rgba(0,0,0,0.74);
 -webkit-box-shadow: 5px 1px 117px 38px rgba(0,0,0,0.74);

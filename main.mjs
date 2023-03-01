@@ -85,7 +85,7 @@ class setLayout
         let form = document.createElement("li");
         form.classList.add("navbar-link");
         form.id = "form";
-        form.innerHTML = "<a href='#'>Form</a>";
+        form.innerHTML = "<a href='form.html'>Form</a>";
         navLinks.appendChild(form);
     
         //append elements
