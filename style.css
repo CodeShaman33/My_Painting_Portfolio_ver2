@@ -475,3 +475,35 @@ border-radius: 10px;
 
     
 }
+
+#main-container[data-form]
+{
+    background-color: #23a6d5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container 
+{
+    width: 80%;
+    height: 70vh;
+    background-color: #b134b6;
+    display: flex;
+    flex-direction: column;
+}
+
+.form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.form > *
+{
+    margin-bottom: 20px;
+    width: 80%;
+    align-self: center;
+}
+
+
